@@ -1,6 +1,8 @@
 # History files
 .Rhistory
 .Rapp.history
+.Rproj.user
+.Ruserdata
 
 # Session Data files
 .RData
@@ -8,26 +10,22 @@
 # Example code in package build process
 *-Ex.R
 
-# Output files from R CMD build
-/*.tar.gz
-
-# Output files from R CMD check
-/*.Rcheck/
-
 # RStudio files
 .Rproj.user/
+LowWAFOMNiederreiterXing.Rproj
 
 # produced vignettes
 vignettes/*.html
 vignettes/*.pdf
+vignettes/.build.timestamp
 
 # OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
 .httr-oauth
 
-# knitr and R markdown default cache directories
-/*_cache/
-/cache/
+# C++ files
+src/*.o
+src/*.so
+src/*.rds
 
-# Temporary files created by R markdown
-*.utf8.md
-*.knit.md
+# osx file
+.DS_Store
