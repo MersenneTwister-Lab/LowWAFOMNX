@@ -1,0 +1,76 @@
+---
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Low WAFOM Niederreiter-Xing Sequence}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8](inputenc)
+---
+
+Low WAFOM Niederreiter-Xing Sequence
+------------------------------------
+
+森信輔による修士論文「数値積分のためのQMC点集合の設計,探索およびその有効性」において
+述べられた方法で探索された「Sobol sequence に基づくLow WAFOM Sequence」を
+Rに移植したもの。
+
+このR版は座標値ゼロを返さず,代わりにゼロに近い値$2^-64$を返す。
+
+このプロジェクトは部分的にJST CRESTのサポートを受けています。
+
+Reference
+---------
+* Shinsuke Mori,
+  "Suuchi Sekibun no tameno QMC Ten Shuugou no Sekkei, Tansaku,
+  oyobi sono Yuukousei",
+  Master's Thesis, 2017,
+* Ryuichi Ohori,
+  "Efficient Quasi Monte Carlo Integration by Adjusting the
+  Derivation-sensitivity Parameter of Walsh Figure of Merit",
+  Master's Thesis, 2015.
+* S. Harase and R. Ohori,
+  "A search for extensible low-WAFOM point sets",
+  arXiv preprint, arXiv:1309.7828, (2013),
+  [https://arxiv.org/abs/1309.7828](https://arxiv.org/abs/1309.7828).
+* M. Matsumoto and R. Ohori,
+  "Walsh Figure of Merit for Digital Nets: An Easy Measure
+  for Higher Order Convergent QMC",
+  Springer International Publishing, Cham, 2016, pp. 143-160.
+* M. Matsumoto, M. Saito, and K. Matoba,
+  "A computable figure of merit for quasi-Monte Carlo point sets",
+  Mathematics of Computation, 83 (2014), pp. 1233-1250.
+* G. Pirsic,
+  "A software implementation of Niederreiter-Xing sequences",
+  in Monte Carlo and Quasi-Monte Carlo Methods 2000,
+  Springer, 2002, pp. 434-445.
+
+Sample
+------
+Low WAFOM Niederreiter-Xing Sequenceの使用可能な次元を取得する。
+```{r}
+library(LowWAFOMNX)
+lowWAFOMNX.dimMinMax()
+```
+
+Low WAFOM Niederreiter-Xing Sequenceの使用可能なF2次元を取得する。
+```{r}
+lowWAFOMNX.dimF2MinMax(10)
+```
+
+そして点集合を取得する。次元をsとすると、各点は$(0,1)^s$に属する。
+返却された行列の各行はs-次元の点の一つを示している。
+```{r}
+s <- 4
+m <- 10
+c <- 2^m
+mat <- lowWAFOMNX.points(dimR=s, dimF2=m, count=c)
+mat[1,]
+```
+
+デジタルシフトされた点集合を取得する。
+```{r}
+s <- 4
+m <- 10
+c <- 2^m
+mat <- lowWAFOMNX.points(dimR=s, dimF2=m, count=c, digitalShift=TRUE)
+mat[1,]
+```
