@@ -6,16 +6,8 @@
 \alias{LowWAFOMNX}
 \title{Low WAFOM Niederreiter-Xing Sequence}
 \description{
-R implementation of Low WAFOM Niederreiter-Xing Sequence,
-based on
-Shinsuke Mori,
-"Suuchi Sekibun no tameno QMC Ten Shuugou no Sekkei, Tansaku,
-oyobi sono Yuukousei",
-Master's Thesis, 2017,
-and Ryuichi. Ohori,
-"Efficient Quasi Monte Carlo Integration by Adjusting the
-Derivation-sensitivity Parameter of Walsh Figure of Merit",
-Master's Thesis, 2015.
+Description: R implementation of Low Walsh Figure of Merit Sequence
+based on Niederreiter-Xing Sequence.
 }
 \details{
 Porting to R by Mutsuo Saito.
