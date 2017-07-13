@@ -15,7 +15,7 @@ Author: Shinsuke Mori [aut],
         Makoto Matsumoto [aut],
         Mutsuo Saito [cre]
 Maintainer: Mutsuo Saito <sai10@hiroshima-u.ac.jp>
-Description: R implementation of Low Walsh Figure of Merit Sequence
+Description: R implementation of Low Walsh Figure of Merit (WAFOM) Sequence
         based on Niederreiter-Xing Sequence.
 URL: https://mersennetwister-lab.github.io/LowWAFOMNX/
 License: BSD_3_clause + file LICENSE
