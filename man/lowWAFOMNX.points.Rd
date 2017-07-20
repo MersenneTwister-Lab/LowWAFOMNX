@@ -4,14 +4,12 @@
 \alias{lowWAFOMNX.points}
 \title{get points from Low WAFOM Niederreiter-XingSobolSequence}
 \usage{
-lowWAFOMNX.points(dimR, dimF2 = 10, count, digitalShift = FALSE)
+lowWAFOMNX.points(dimR, dimF2 = 10, digitalShift = FALSE)
 }
 \arguments{
 \item{dimR}{dimention.}
 
 \item{dimF2}{F2-dimention of each element.}
-
-\item{count}{number of points.}
 
 \item{digitalShift}{use digital shift or not.}
 }
