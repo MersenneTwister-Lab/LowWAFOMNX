@@ -4,7 +4,7 @@
 ##' based on Niederreiter-Xing Sequence.
 ##'
 ##' Porting to R by Mutsuo Saito.
-##' The R version does not returns cordinate value zero,
+##' The R version does not return coordinate value zero,
 ##' but returns value very near to zero, 2^-64.
 ##'
 ##'@section Acknowledgment:
@@ -29,6 +29,10 @@
 ##'   "A search for extensible low-WAFOM point sets",
 ##'   arXiv preprint, arXiv:1309.7828, (2013),
 ##'   https://arxiv.org/abs/1309.7828.
+##' * Harase, S. (2016).
+##'   "A search for extensible low-WAFOM point sets",
+##'   Monte Carlo Methods and Applications, 22(4), pp. 349-357, 2017.
+##    doi:10.1515/mcma-2016-0119
 ##' * M. Matsumoto and R. Ohori,
 ##'   "Walsh Figure of Merit for Digital Nets: An Easy Measure
 ##'   for Higher Order Convergent QMC",
@@ -58,7 +62,7 @@ NULL
 ##' get minimum and maximum dimension number of Low WAFOM Niederreiter-Xing
 ##' Sequence
 ##'
-##'@return supportd minimum and maximum dimension number.
+##'@return supported minimum and maximum dimension number.
 ##'@export
 lowWAFOMNX.dimMinMax <- function() {
   fname <- "nxlw64.sqlite3"
@@ -74,7 +78,7 @@ lowWAFOMNX.dimMinMax <- function() {
 ##' get minimum and maximum F2 dimension number.
 ##'
 ##'@param dimR dimention.
-##'@return supportd minimum and maximum F2 dimension number
+##'@return supported minimum and maximum F2 dimension number
 ##'@export
 lowWAFOMNX.dimF2MinMax <- function(dimR) {
   fname <- "nxlw64.sqlite3"
@@ -90,10 +94,10 @@ lowWAFOMNX.dimF2MinMax <- function(dimR) {
 
 ##' get points from Low WAFOM Niederreiter-XingSobolSequence
 ##'
-##' This R version does not returns cordinate value zero,
+##' This R version does not returns coordinate value zero,
 ##' but returns value very near to zero, 2^-64.
-##'@param dimR dimention.
-##'@param dimF2 F2-dimention of each element.
+##'@param dimR dimension.
+##'@param dimF2 F2-dimension of each element.
 ##'@param digitalShift use digital shift or not.
 ##'@return matrix of points where every row contains dimR dimensional point.
 ##'@export

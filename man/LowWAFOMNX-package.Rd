@@ -11,7 +11,7 @@ based on Niederreiter-Xing Sequence.
 }
 \details{
 Porting to R by Mutsuo Saito.
-The R version does not returns cordinate value zero,
+The R version does not return coordinate value zero,
 but returns value very near to zero, 2^-64.
 }
 \section{Acknowledgment}{
@@ -34,6 +34,9 @@ by JST CREST.
   "A search for extensible low-WAFOM point sets",
   arXiv preprint, arXiv:1309.7828, (2013),
   https://arxiv.org/abs/1309.7828.
+* Harase, S. (2016).
+  "A search for extensible low-WAFOM point sets",
+  Monte Carlo Methods and Applications, 22(4), pp. 349-357, 2017.
 * M. Matsumoto and R. Ohori,
   "Walsh Figure of Merit for Digital Nets: An Easy Measure
   for Higher Order Convergent QMC",

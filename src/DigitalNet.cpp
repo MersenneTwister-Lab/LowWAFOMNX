@@ -49,7 +49,7 @@ using namespace std;
  */
 namespace {
     using namespace DigitalNetNS;
-
+#if !defined(IN_RCPP)
     const string digital_net_path = "DIGITAL_NET_PATH";
     struct digital_net_name {
         std::string name;
@@ -67,26 +67,22 @@ namespace {
     };
 
     const uint32_t digital_net_name_data_size = 5;
+#endif
 
-#if defined(IN_RCPP)
-    stringstream errs;
-    void msgout(stringstream& ss)
-    {
-        string s;
-        ss >> s;
-        warning(s);
-    }
-#else
+#if !defined(IN_RCPP)
     ostream& errs = cerr;
     void msgout(ostream&)
     {
     }
+#endif
 
+#if !defined(IN_RCPP)
     const char * getDataPath()
     {
         return getenv(digital_net_path.c_str());
     }
-
+#endif
+#if !defined(IN_RCPP)
     const string makePath(const string& name, const string& ext)
     {
         string path;
@@ -107,7 +103,8 @@ namespace {
         path += ext;
         return path;
     }
-#endif // IN_RCPP
+#endif // !IN_RCPP
+
 #if defined(USE_FILE)
     template<typename U>
     int read_sobol_base(const string& path, uint32_t s, uint32_t m, U base[])
@@ -145,8 +142,8 @@ namespace {
         return 0;
     }
 #endif // USE_FILE
-#if defined(IN_RCPP)
-#if defined(USE_DF) && defined(USE_SOBOL)
+
+#if defined(IN_RCPP) && defined(USE_DF) && defined(USE_SOBOL)
     template<typename U>
     int read_sobol_base(DataFrame df, uint32_t s, uint32_t m, U base[])
     {
@@ -168,7 +165,8 @@ namespace {
         return 0;
     }
 #endif
-#else // not IN_RCPP
+
+#if !defined(IN_RCPP)
     template<typename U>
     int selectSobolBase(const string& path, uint32_t s, uint32_t m, U base[])
     {
@@ -192,17 +190,15 @@ namespace {
         return 0;
     }
 #endif // IN_RCPP
+
+#if !defined(IN_RCPP)
     template<typename U>
     int read_digital_net_data(std::istream& is, int n,
                               uint32_t s, uint32_t m,
                               U base[],
                               int * tvalue, double * wafom)
     {
-#if defined(IN_CRAN)
-        uint64_t * data = new uint64_t[s * m];
-#else
         uint64_t data[s * m];
-#endif
         uint64_t tmp;
         uint32_t i = 0;
         uint32_t j = 0;
@@ -247,11 +243,9 @@ namespace {
                                         & UINT32_C(0xffffffff));
             }
         }
-#if defined(IN_CRAN)
-        delete[] data;
-#endif
         return 0;
     }
+#endif
 
 #if defined(IN_RCPP)
 #if defined(USE_DF)
@@ -330,7 +324,9 @@ namespace {
         return 0;
     }
 #endif // USE_DF
-#else // not IN_RCPP
+#endif
+
+#if !defined(IN_RCPP)
     template<typename U>
     int read_digital_net_data(digital_net_id id, uint32_t s, uint32_t m,
                               U base[],
@@ -433,7 +429,9 @@ namespace {
 #endif
         return 0;
     }
+#endif
 
+#if !defined(IN_RCPP)
     template<typename U>
     int select_digital_net_data(digital_net_id id, uint32_t s, uint32_t m,
                                 U base[],
@@ -570,7 +568,9 @@ namespace {
 #endif
         return 0;
     }
+#endif
 
+#if !defined(IN_RCPP)
     int get_s_max(const string& path, digital_net_id id)
     {
         // db open
@@ -844,7 +844,7 @@ namespace DigitalNetNS {
             return get_m_min(path, id, s);
         }
     }
-#endif
+
     const string getDigitalNetName(uint32_t index)
     {
         if (index < digital_net_name_data_size) {
@@ -866,7 +866,7 @@ namespace DigitalNetNS {
             return -1;
         }
     }
-
+#endif
 /**
  * Constructor from input stream
  *
@@ -881,6 +881,7 @@ namespace DigitalNetNS {
  * @param is input stream, from where digital net data are read.
  * @exception runtime_error, when can't read data from is.
  */
+#if !defined(IN_RCPP)
     int readDigitalNetData(std::istream& is, int n,
                            uint32_t s, uint32_t m,
                            uint64_t base[],
@@ -888,7 +889,6 @@ namespace DigitalNetNS {
     {
         return read_digital_net_data(is, n, s, m, base, tvalue, wafom);
     }
-
     int readDigitalNetData(std::istream& is, int n,
                            uint32_t s, uint32_t m,
                            uint32_t base[],
@@ -896,7 +896,7 @@ namespace DigitalNetNS {
     {
         return read_digital_net_data(is, n, s, m, base, tvalue, wafom);
     }
-
+#endif
 /**
  * Constructor from reserved data
  *
@@ -928,14 +928,6 @@ namespace DigitalNetNS {
                            int * tvalue, double * wafom)
     {
         //stop("before read_digital_net_data");
-        return read_digital_net_data(df, id, s, m, base, tvalue, wafom);
-    }
-
-    int readDigitalNetData(DataFrame df, digital_net_id id,
-                           uint32_t s, uint32_t m,
-                           uint32_t base[],
-                           int * tvalue, double * wafom)
-    {
         return read_digital_net_data(df, id, s, m, base, tvalue, wafom);
     }
 #endif

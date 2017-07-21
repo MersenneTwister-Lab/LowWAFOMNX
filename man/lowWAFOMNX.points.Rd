@@ -7,9 +7,9 @@
 lowWAFOMNX.points(dimR, dimF2 = 10, digitalShift = FALSE)
 }
 \arguments{
-\item{dimR}{dimention.}
+\item{dimR}{dimension.}
 
-\item{dimF2}{F2-dimention of each element.}
+\item{dimF2}{F2-dimension of each element.}
 
 \item{digitalShift}{use digital shift or not.}
 }
@@ -17,6 +17,6 @@ lowWAFOMNX.points(dimR, dimF2 = 10, digitalShift = FALSE)
 matrix of points where every row contains dimR dimensional point.
 }
 \description{
-This R version does not returns cordinate value zero,
+This R version does not returns coordinate value zero,
 but returns value very near to zero, 2^-64.
 }
