@@ -14,8 +14,8 @@
 <body>
 <h1 id="r-package-low-wafom-sequences-based-on-niederreiter-xing-sequences">R package: Low WAFOM Sequences based on Niederreiter-Xing sequences</h1>
 <p>Low WAFOM Sequences based on Niederreiter-Xing sequences are searched using an algorithm described in Shinsuke Mori's master thesis.</p>
-<h2 id="caution">Caution</h2>
-<p>Currently, this project is very experimental.</p>
+<h2 id="information">Information</h2>
+<p>LowWAFOMNX 1.0 is now available in CRAN.</p>
 <h2 id="link">Link</h2>
 <ul>
 <li><a href="index-ja.html">Japanese Version</a></li>
@@ -24,22 +24,36 @@
 <li><a href="https://mersennetwister-lab.github.io/LowWAFOMNX/">This Page</a></li>
 </ul>
 <h2 id="install">Install</h2>
-<p>You can install the packeage in R like this:</p>
+<p>You can install the release packeage from CRAN.</p>
+<h3 id="install-develop-version">Install Develop version</h3>
+<ul>
+<li>Windows Users need <a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools</a>.</li>
+<li>Mac users need Xcode.</li>
+</ul>
+<p>And then,</p>
 <pre><code>install.packages('devtools')
 library('devtools')
-install_github(&quot;MersenneTwister-Lab/LowWAFOMNX&quot;)</code></pre>
-<h2 id="recovery">Recovery</h2>
-<p>If fail, try old good style, download and install.</p>
+install_github(&quot;MersenneTwister-Lab/LowWAFOMNX&quot;, ref='develop')</code></pre>
+<h2 id="download">Download</h2>
+<h3 id="release-version">Release Version:</h3>
 <ul>
 <li>Source Package: <a href="LowWAFOMNX_1.0.tar.gz" class="uri">LowWAFOMNX_1.0.tar.gz</a></li>
 <li>OS X Binary Package: <a href="LowWAFOMNX_1.0.tgz" class="uri">LowWAFOMNX_1.0.tgz</a></li>
 <li>Windows Binary Package: <a href="LowWAFOMNX_1.0.zip" class="uri">LowWAFOMNX_1.0.zip</a></li>
+</ul>
+<h3 id="develop-version">Develop Version:</h3>
+<ul>
+<li>Source Package: <a href="LowWAFOMNX_1.0.1.tar.gz" class="uri">LowWAFOMNX_1.0.1.tar.gz</a></li>
+<li>OS X Binary Package: <a href="LowWAFOMNX_1.0.1.tgz" class="uri">LowWAFOMNX_1.0.1.tgz</a></li>
+<li>Windows Binary Package: <a href="LowWAFOMNX_1.0.1.zip" class="uri">LowWAFOMNX_1.0.1.zip</a></li>
+<li><a href="v1_0_1/lowWAFOMNX.html">vignettes</a></li>
 </ul>
 <h2 id="reference">Reference</h2>
 <ul>
 <li>Shinsuke Mori, &quot;Suuchi Sekibun no tameno QMC Ten Shuugou no Sekkei, Tansaku, oyobi sono Yuukousei&quot;, Master's Thesis, 2017.</li>
 <li>Ryuichi Ohori, &quot;Efficient Quasi Monte Carlo Integration by Adjusting the Derivation-sensitivity Parameter of Walsh Figure of Merit&quot;, Master's Thesis, 2015.</li>
 <li>S. Harase and R. Ohori, &quot;A search for extensible low-WAFOM point sets&quot;, arXiv preprint, arXiv:1309.7828, (2013), https://arxiv.org/abs/1309.7828.</li>
+<li>Harase, S. (2016). &quot;A search for extensible low-WAFOM point sets&quot;, Monte Carlo Methods and Applications, 22(4), pp. 349-357, 2017. <a href="doi:10.1515/mcma-2016-0119" class="uri">doi:10.1515/mcma-2016-0119</a></li>
 <li>M. Matsumoto and R. Ohori, &quot;Walsh Figure of Merit for Digital Nets: An Easy Measure for Higher Order Convergent QMC&quot;, Springer International Publishing, Cham, 2016, pp. 143-160.</li>
 <li>M. Matsumoto, M. Saito, and K. Matoba, &quot;A computable figure of merit for quasi-Monte Carlo point sets&quot;, Mathematics of Computation, 83 (2014), pp. 1233-1250.</li>
 <li>G. Pirsic, &quot;A software implementation of Niederreiter-Xing sequences&quot;, in Monte Carlo and Quasi-Monte Carlo Methods 2000, Springer, 2002, pp. 434-445. https://sites.google.com/site/isabelpirsic/nxlegacy.</li>

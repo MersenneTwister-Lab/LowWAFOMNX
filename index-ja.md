@@ -5,8 +5,8 @@ R package: Sobol sequence に基づくLow WAFOM Sequence
 述べられた方法で探索された「Sobol sequence に基づくLow WAFOM Sequence」を
 Rに移植したもの。
 
-##注意
-いまのところ、このプロジェクトはまったく実験的なものです。
+##お知らせ
+このパッケージはCRANに登録されました。
 
 ##リンク
 
@@ -16,6 +16,9 @@ Rに移植したもの。
 - [このページ](https://mersennetwister-lab.github.io/LowWAFOMNX/)
 
 ##インストール
+リリース版はCRANからインストールできます。
+
+### 開発版のインストール
 まず、
 
 - Windows利用者は[Rtools](https://cran.r-project.org/bin/windows/Rtools/)を
@@ -27,15 +30,22 @@ Rに移植したもの。
 ```
 install.packages('devtools')
 library('devtools')
-install_github('MersenneTwister-Lab/LowWAFOMNX')
+install_github('MersenneTwister-Lab/LowWAFOMNX', ref='develop')
 ```
 
-##やり直し
-上記の方法でうまくいかないときは、ダウンロードしてインストールする方法を試してください。
+##ダウンロード
+###リリース版
 
 - Source Package: [LowWAFOMNX_1.0.tar.gz](LowWAFOMNX_1.0.tar.gz)
 - OS X Binary Package: [LowWAFOMNX_1.0.tgz](LowWAFOMNX_1.0.tgz)
 - Windows Binary Package: [LowWAFOMNX_1.0.zip](LowWAFOMNX_1.0.zip)
+
+###開発版
+
+- Source Package: [LowWAFOMNX_1.0.1.tar.gz](LowWAFOMNX_1.0.1.tar.gz)
+- OS X Binary Package: [LowWAFOMNX_1.0.1.tgz](LowWAFOMNX_1.0.1.tgz)
+- Windows Binary Package: [LowWAFOMNX_1.0.1.zip](LowWAFOMNX_1.0.1.zip)
+- [vignettes](v1_0_1/lowWAFOMNX-ja.html)
 
 ##参照
 * 森 信輔,
