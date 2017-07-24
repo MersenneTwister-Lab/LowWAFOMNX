@@ -1,8 +1,8 @@
 Package: LowWAFOMNX
 Type: Package
 Title: Low WAFOM Niederreiter-Xing Sequence
-Version: 1.0.1
-Date: 2017-07-20
+Version: 1.1.0
+Date: 2017-07-24
 Authors@R: c(person("Shinsuke", "Mori", role = "aut",
                     email="shinsukemori@hiroshima-u.ac.jp"),
              person("Ryuichi", "Ohori", role = "aut"),

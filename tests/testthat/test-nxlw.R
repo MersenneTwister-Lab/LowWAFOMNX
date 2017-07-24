@@ -22,6 +22,8 @@ test_that("test lowWAFOMNX points", {
   expect_equal(ncol(matrix), s)
   expect_true(all(matrix < 1))
   expect_true(all(matrix > 0))
+  r2 <- c(0.878349, 0.663337, 0.750795, 0.434933)
+  expect_equal(matrix[2,], r2, tolerance=0.000001)
 })
 
 test_that("test lowWAFOMNX points digitalShift", {

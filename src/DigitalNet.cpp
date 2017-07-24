@@ -294,11 +294,12 @@ namespace {
         ssbase >> str;
 #if defined(DEBUG)
         Rcout << "data = " << str << endl;
+        Rcout << "str[0] = "<< str[0] << endl;
 #endif
         //stop("step 3");
         uint64_t * b = new uint64_t[s * m];
-        hexchar64tohost(reinterpret_cast<const uint8_t *>(str.c_str()),
-                        str.size(), b);
+        hexchar64tohost(reinterpret_cast<const uint8_t *>(str.c_str()+2),
+                        str.size()-3, b);
         //nb64tohost(reinterpret_cast<const uint8_t *>(str.c_str()),
         //           str.size(), b);
         //nb64tohost(str.c_str(), str.size(), base);
