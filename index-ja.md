@@ -6,7 +6,8 @@ R package: Sobol sequence に基づくLow WAFOM Sequence
 Rに移植したもの。
 
 ##お知らせ
-このパッケージはCRANに登録されました。
+- CRAN に登録されているバージョンにはバグがあります、バージョン 1.0 以降をお使いください。
+- このパッケージはCRANに登録されました。
 
 ##リンク
 
@@ -42,9 +43,9 @@ install_github('MersenneTwister-Lab/LowWAFOMNX', ref='develop')
 
 ###開発版
 
-- Source Package: [LowWAFOMNX_1.0.1.tar.gz](LowWAFOMNX_1.0.1.tar.gz)
-- OS X Binary Package: [LowWAFOMNX_1.0.1.tgz](LowWAFOMNX_1.0.1.tgz)
-- Windows Binary Package: [LowWAFOMNX_1.0.1.zip](LowWAFOMNX_1.0.1.zip)
+- Source Package: [LowWAFOMNX_1.1.0.tar.gz](LowWAFOMNX_1.1.0.tar.gz)
+- OS X Binary Package: [LowWAFOMNX_1.1.0.tgz](LowWAFOMNX_1.1.0.tgz)
+- Windows Binary Package: [LowWAFOMNX_1.1.0.zip](LowWAFOMNX_1.1.0.zip)
 - [vignettes](v1_0_1/lowWAFOMNX-ja.html)
 
 ##参照
