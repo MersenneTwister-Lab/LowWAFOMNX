@@ -39,9 +39,9 @@ install_github("MersenneTwister-Lab/LowWAFOMNX", ref='develop')
 - Windows Binary Package: [LowWAFOMNX_1.0.zip](LowWAFOMNX_1.0.zip)
 
 ### Develop Version:
-- Source Package: [LowWAFOMNX_1.1.0.tar.gz](LowWAFOMNX_1.1.0.tar.gz)
-- OS X Binary Package: [LowWAFOMNX_1.1.0.tgz](LowWAFOMNX_1.1.0.tgz)
-- Windows Binary Package: [LowWAFOMNX_1.1.0.zip](LowWAFOMNX_1.1.0.zip)
+- Source Package: [LowWAFOMNX_1.1.1.tar.gz](LowWAFOMNX_1.1.1.tar.gz)
+- OS X Binary Package: [LowWAFOMNX_1.1.1.tgz](LowWAFOMNX_1.1.1.tgz)
+- Windows Binary Package: [LowWAFOMNX_1.1.1.zip](LowWAFOMNX_1.1.1.zip)
 - [vignettes](v1_0_1/lowWAFOMNX.html)
 
 ##Reference
