@@ -6,8 +6,7 @@ are searched using an algorithm described in Shinsuke Mori's
 master thesis.
 
 ##Information
-- version 1.0 on CRAN has bugs, please use version 1.1 or later.
-- LowWAFOMNX 1.0 is now available in CRAN.
+- version 1.1.1, bug fixed version, is now on CRAN.
 
 ##Link
 - [Japanese Version](index-ja.html)
@@ -34,11 +33,14 @@ install_github("MersenneTwister-Lab/LowWAFOMNX", ref='develop')
 ##Download
 
 ### Release Version:
-- Source Package: [LowWAFOMNX_1.0.tar.gz](LowWAFOMNX_1.0.tar.gz)
-- OS X Binary Package: [LowWAFOMNX_1.0.tgz](LowWAFOMNX_1.0.tgz)
-- Windows Binary Package: [LowWAFOMNX_1.0.zip](LowWAFOMNX_1.0.zip)
+- Source Package: [LowWAFOMNX_1.1.1.tar.gz](LowWAFOMNX_1.1.1.tar.gz)
+- OS X Binary Package: [LowWAFOMNX_1.1.1.tgz](LowWAFOMNX_1.1.1.tgz)
+- Windows Binary Package: [LowWAFOMNX_1.1.1.zip](LowWAFOMNX_1.1.1.zip)
 
 ### Develop Version:
+
+Now, Develop version is same as release version.
+
 - Source Package: [LowWAFOMNX_1.1.1.tar.gz](LowWAFOMNX_1.1.1.tar.gz)
 - OS X Binary Package: [LowWAFOMNX_1.1.1.tgz](LowWAFOMNX_1.1.1.tgz)
 - Windows Binary Package: [LowWAFOMNX_1.1.1.zip](LowWAFOMNX_1.1.1.zip)
