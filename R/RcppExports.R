@@ -2,6 +2,6 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 rcppLowWAFOMNXPoints <- function(df, dimR, dimF2, count, shiftVector) {
-    .Call('LowWAFOMNX_rcppLowWAFOMNXPoints', PACKAGE = 'LowWAFOMNX', df, dimR, dimF2, count, shiftVector)
+    .Call('_LowWAFOMNX_rcppLowWAFOMNXPoints', PACKAGE = 'LowWAFOMNX', df, dimR, dimF2, count, shiftVector)
 }
 

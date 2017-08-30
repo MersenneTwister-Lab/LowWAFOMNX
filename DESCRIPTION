@@ -1,8 +1,8 @@
 Package: LowWAFOMNX
 Type: Package
 Title: Low WAFOM Niederreiter-Xing Sequence
-Version: 1.1.0
-Date: 2017-07-24
+Version: 1.1.1
+Date: 2017-08-21
 Authors@R: c(person("Shinsuke", "Mori", role = "aut",
                     email="shinsukemori@hiroshima-u.ac.jp"),
              person("Ryuichi", "Ohori", role = "aut"),
@@ -15,8 +15,8 @@ Author: Shinsuke Mori [aut],
         Makoto Matsumoto [aut],
         Mutsuo Saito [cre]
 Maintainer: Mutsuo Saito <sai10@hiroshima-u.ac.jp>
-Description: R implementation of Low Walsh Figure of Merit (WAFOM) Sequence
-        based on Niederreiter-Xing Sequence.
+Description: Implementation of Low Walsh Figure of Merit (WAFOM) sequence
+        based on Niederreiter-Xing sequence <DOI:10.1007/978-3-642-56046-0_30>.
 URL: https://mersennetwister-lab.github.io/LowWAFOMNX/
 License: BSD_3_clause + file LICENSE
 Imports: Rcpp (>= 0.12.9), RSQLite (>= 2.0)

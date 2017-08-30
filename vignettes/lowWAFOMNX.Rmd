@@ -44,7 +44,7 @@ Reference
 * Harase, S. (2016).
   "A search for extensible low-WAFOM point sets",
   Monte Carlo Methods and Applications, 22(4), pp. 349-357, 2017.
-  [doi:10.1515/mcma-2016-0119](doi:10.1515/mcma-2016-0119)
+  \doi{10.1515/mcma-2016-0119}
 * M. Matsumoto and R. Ohori,
   "Walsh Figure of Merit for Digital Nets: An Easy Measure
   for Higher Order Convergent QMC",
@@ -56,6 +56,7 @@ Reference
   "A software implementation of Niederreiter-Xing sequences",
   in Monte Carlo and Quasi-Monte Carlo Methods 2000,
   Springer, 2002, pp. 434-445.
+  \doi{10.1007/978-3-642-56046-0_30}
 
 Sample
 ------

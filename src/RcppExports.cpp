@@ -7,7 +7,7 @@ using namespace Rcpp;
 
 // rcppLowWAFOMNXPoints
 NumericMatrix rcppLowWAFOMNXPoints(DataFrame df, int dimR, int dimF2, int count, NumericVector shiftVector);
-RcppExport SEXP LowWAFOMNX_rcppLowWAFOMNXPoints(SEXP dfSEXP, SEXP dimRSEXP, SEXP dimF2SEXP, SEXP countSEXP, SEXP shiftVectorSEXP) {
+RcppExport SEXP _LowWAFOMNX_rcppLowWAFOMNXPoints(SEXP dfSEXP, SEXP dimRSEXP, SEXP dimF2SEXP, SEXP countSEXP, SEXP shiftVectorSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::traits::input_parameter< DataFrame >::type df(dfSEXP);
@@ -21,7 +21,7 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"LowWAFOMNX_rcppLowWAFOMNXPoints", (DL_FUNC) &LowWAFOMNX_rcppLowWAFOMNXPoints, 5},
+    {"_LowWAFOMNX_rcppLowWAFOMNXPoints", (DL_FUNC) &_LowWAFOMNX_rcppLowWAFOMNXPoints, 5},
     {NULL, NULL, 0}
 };
 
